@@ -12,8 +12,9 @@ After the QR I set out to up skill in the topic and gain a much deeper understan
 
 When I started looking into when to use  IEnumerable vs List vs Array this was one of the first things I came across in a SO post.
 
-
-``IEnumerable describes behavior, while List is an implementation of that behavior. When you use IEnumerable, you give the compiler a chance to defer work until later, possibly optimizing along the way. If you use ToList() you force the compiler to reify the results right away.``
+```
+"IEnumerable describes behavior, while List is an implementation of that behavior. When you use IEnumerable, you give the compiler a chance to defer work until later, possibly optimizing along the way. If you use ToList() you force the compiler to reify the results right away."
+```
 
 At first, this made a bit of sense to me, but I didn’t really understand the statement about:
 
@@ -46,10 +47,11 @@ Now, what would you expect this code to output to the console?
 I know that at first I thought the program would output `alexia, sumanth`.
 
 Then I thought further about the SO post.
-
+```
 “When you use IEnumerable, you give the compiler a chance to defer work until later, possibly optimizing along the way.”
+```
 
-defer work until later, hey?
+Defer work until later, hey?
 
 So what is actually happening here? 
 
