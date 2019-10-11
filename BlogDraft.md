@@ -101,7 +101,7 @@ Other useful links on the topic:
 - [IEnumerable vs List](https://stackoverflow.com/questions/3628425/ienumerable-vs-list-what-to-use-how-do-they-work/3628462#3628462).
 - [When To Use IEnumerable, ICollection, IList And List](https://www.claudiobernasconi.ch/2013/07/22/when-to-use-ienumerable-icollection-ilist-and-list/)
 
-I hope this helps some people understand a little more about the difference between the levels of abstraction between a List and an IEnumerable. There is a lot more to learn from this topic, but this is a tricky starting point and one that took me a little while to get my head around. 
+I hope this helps some people understand a little more about the difference between the levels of abstraction of a List and an IEnumerable. There is a lot more to learn from this topic, but this is a tricky starting point and one that took me a little while to get my head around. 
 
 
 
