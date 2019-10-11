@@ -97,7 +97,7 @@ names[0] = "benjamin";
 So when we itterate over `moreThanFiveLetters`, `alexia, sumanth` is written to the console.
 
 
-I hope this helps some people understand a little more about the difference between the levels of abstraction between a List and an IEnumberable.
+I hope this helps some people understand a little more about the difference between the levels of abstraction between a List and an IEnumberable. There is a lot more to learn from this topic, but this is a tricky starting point and one that took me a little while to get my head around. 
 
 
 
