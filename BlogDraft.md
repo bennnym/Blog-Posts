@@ -90,13 +90,16 @@ names[0] = "benjamin";
 
 So when we iterate over `moreThanFiveLetters`, `alexia, sumanth` is written to the console.
 
-Key Findings:
+Key findings:
 - IEnumerable is read-only and List is not.
 - IEnumerable types have a method to get the next item in the collection. It doesn't need the whole collection to be in memory and doesn't know how many items are in it, foreach just keeps getting the next item until it runs out.
 - List implements IEnumerable, but represents the entire collection in memory.
 - LINQ expressions return an enumeration, and by default the expression executes when you iterate through it using a foreach, but you can force it to iterate sooner using `.ToList()` or `.ToArray()`.
 
-
+Other useful links on the topic:
+- [Multiple enumeration](http://twistedoakstudios.com/blog/Post7694_achieving-exponential-slowdown-by-enumerating-twice).
+- [IEnumerable vs List](https://stackoverflow.com/questions/3628425/ienumerable-vs-list-what-to-use-how-do-they-work/3628462#3628462).
+- [When To Use IEnumerable, ICollection, IList And List](https://www.claudiobernasconi.ch/2013/07/22/when-to-use-ienumerable-icollection-ilist-and-list/)
 
 I hope this helps some people understand a little more about the difference between the levels of abstraction between a List and an IEnumerable. There is a lot more to learn from this topic, but this is a tricky starting point and one that took me a little while to get my head around. 
 
