@@ -55,9 +55,9 @@ So what is actually happening here?
 
 When you run a LINQ it returns an IEnumerable\<T>, so it doesn't actually save the results of the query into memory. It just saves the actual query and delays the execution until later when it is looped over or a value type is extracted from the variable it is saved in.
 
-So in this specific example when the code is iterating over the `moreThanFiveLetters` IEnumerable it executes the query on the `names` List and its current contents at the time of the loops' execution.
+So in this specific example when the code is iterating over the `moreThanFiveLetters` IEnumerable it executes the query on the `names` List and its current contents at the time of the loops' execution. In the above example the loop is executed after the `names` list has had the first element assigned to "benjamin". 
 
-This means that the above code actually writes `benjamin, alexia, sumanth` to the console. 
+This means that the above code actually outputs `benjamin, alexia, sumanth` to the console. 
 
 To really drum home the concept let's consider the following code ( it is the same as the above code, only I have cast the IEnumerable into a List with .ToList() ):
 
@@ -74,7 +74,7 @@ foreach (var name in moreThanFiveLetters)
 }
 ```
 
-In the above example what do you think is written to the console?
+In the above example what do you think is output to the console?
 
 If you guessed `alexia, sumanth` then you are correct!
 
