@@ -26,7 +26,7 @@ static void Main()
 {
   var names = new List<string> {"sam", "alexia", "simon", "sumanth", "tony", "sam", "amr", "mark", "drew"};
   
-  var moreThanFourLetters = names.Where(w => w.Length > 4);
+  var moreThanFiveLetters = names.Where(w => w.Length > 5);
   
   names[0] = "benjamin";
 
