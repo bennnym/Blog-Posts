@@ -8,7 +8,7 @@ The QR went well, I was definitely a little bit nervous at first but after a few
 
 At work I use [Jetbrains Rider IDE](https://www.jetbrains.com/rider/) for all of my C# development, it is incredibly powerful and user friendly once you get the hang of it. It is so powerful that it can often recommend certain types of refactorings to make to your code. Starting out as a developer this can often be a trap. You can find yourself accepting Riders refactoring suggestions and not understanding why. I was slightly guilty of this. In my QR I received some feedback to reinforce my understanding of Collections and in particular when to use each one and the differences between them eg when to use IEnumerable vs List vs Array. 
 
-After the QR I set out to upskill in the topic and gain a much deeper understanding. I found that there was a lack of straight forward up to date information on the topic, so I decided to write a post about it for future aspiring developers in my position.
+After the QR I set out to up skill in the topic and gain a much deeper understanding. I found that there was a lack of straight forward up to date information on the topic, so I decided to write a post about it for future aspiring developers in my position.
 
 So, when I started looking into when to use  IEnumerable vs List vs Array this was one of the first things I came across in a SO post.
 
@@ -87,17 +87,24 @@ In this example casting the IEnumerable via `.ToList()` means that the `moreThan
 
 That is a bit of a mouthful. Think of it like this, List is a class and it has a bunch of properties and methods associated to that class and therefor available to `moreThanFiveLetters` when we cast it to a list. 
 
-Becuase `moreThanFiveLetters` is now an instance of a List and its own object, when we execute:
+Because `moreThanFiveLetters` is now an instance of a List and its own object, when we execute:
 
 ```
 names[0] = "benjamin";
 ```
 `moreThanFiveLetters` technically doesn't know about names  and therefor is unaffected.
 
-So when we itterate over `moreThanFiveLetters`, `alexia, sumanth` is written to the console.
+So when we iterate over `moreThanFiveLetters`, `alexia, sumanth` is written to the console.
+
+Key Findings:
+- IEnumerable is read-only and List is not.
+- IEnumerable types have a method to get the next item in the collection. It doesn't need the whole collection to be in memory and doesn't know how many items are in it, foreach just keeps getting the next item until it runs out.
+- List implements IEnumerable, but represents the entire collection in memory.
+- LINQ expressions return an enumeration, and by default the expression executes when you iterate through it using a foreach, but you can force it to iterate sooner using `.ToList()` or `.ToArray()`.
 
 
-I hope this helps some people understand a little more about the difference between the levels of abstraction between a List and an IEnumberable. There is a lot more to learn from this topic, but this is a tricky starting point and one that took me a little while to get my head around. 
+
+I hope this helps some people understand a little more about the difference between the levels of abstraction between a List and an IEnumerable. There is a lot more to learn from this topic, but this is a tricky starting point and one that took me a little while to get my head around. 
 
 
 
