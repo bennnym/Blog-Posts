@@ -43,12 +43,7 @@ Next we have a LINQ query to find the words that have more than 5 letters. Then 
 
 Now, what would you expect this code to write to the console?
 
-I know that at first I thought that it would write
-`
-alexia
-`
-`
-sumanth
+I know that at first I thought that it would write `alexia, sumanth`
 `
 
 Then I thought further about the SO post.
