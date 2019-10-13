@@ -1,4 +1,4 @@
-## C# IEnumerables vs Lists and Arrays.
+## C# IEnumerables vs Lists and Arrays
 
 **TL;DR**
 It depends! As is always the case with programming. IEnumerables delay execution of the query until the code is looped over or a value type is extracted. Basically IEnumerables have a method to get the next item in the collection, so they look at items "one at a time", they don't need the whole collection to be in memory and don't know how many items are in it, foreach just keeps getting the next item until it runs out. 
