@@ -109,7 +109,7 @@ Because `moreThanFiveLetters` is now an instance of a List and its own object, w
 names[0] = "benjamin";
 ```
 
-`moreThanFiveLetters` technically doesn't know about the `names` variable and therefor is unaffected.
+`moreThanFiveLetters` takes up it's own space in memory and technically doesn't know about the `names` variable and therefor is unaffected.
 
 So when we iterate over `moreThanFiveLetters`, `alexia, sumanth` is written to the console.
 
