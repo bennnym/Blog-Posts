@@ -1,4 +1,4 @@
-## Blog Post
+## C# IEnumerables vs Lists and Arrays.
 
 **TL;DR**
 It depends! As is always the case with programming. IEnumerables delay execution of the query until the code is looped over or a value type is extracted. Basically IEnumerables have a method to get the next item in the collection, so they look at items "one at a time", they don't need the whole collection to be in memory and don't know how many items are in it, foreach just keeps getting the next item until it runs out. 
@@ -11,8 +11,7 @@ When you might use an IEnumerable:
 When you might use a List or Array:
 - You need the results right away and are possibly mutating the structure you are querying later on.
 
-### C# IEnumerables vs Lists and Arrays.
-#### How do they work and when do I choose one over the other.
+## My Story
 
 My name is Ben Muller and I am an aspiring software engineer. I work at MYOB in Sydney, Australia and I have been in the [Future Makers Academy](https://www.myob.com/au/careers/graduate-program) (“FMA”) for just over two months. As part of the FMA protégés have the incredible opportunity to present their code at milestones referred to as quorum reviews (“QR”). At the QR a protégé presents a coding challenge and walks through their solution, business logic, design choices and overall understanding of C# and the language design principles associated with it. The QR is done in front of six senior developers, a principal developer ( lead developer ) and the FMA coordinator.
 
@@ -21,6 +20,8 @@ The QR went well, I was definitely a little bit nervous at first but after a few
 At work I use [Jetbrains Rider IDE](https://www.jetbrains.com/rider/) for all of my C# development, it is incredibly powerful and user friendly once you get the hang of it. It is so smart that it can often recommend certain types of refactorings to make to your code. Starting out as a developer this can often be a trap. You find yourself accepting Riders refactoring suggestions and not understanding why. I was slightly guilty of this. In my QR I received some feedback to go away and make sure I reinforce my understanding of Collections at a deeper level and in particular when to use each one and the differences between them eg when to use IEnumerable vs List vs Array. 
 
 After the QR I set out to up skill in the topic and gain a much deeper understanding. I found that there was a lack of straight forward up to date information on the topic, so I decided to write a post about it for future aspiring developers in my position.
+
+## What I learned
 
 When I started looking into when to use  IEnumerable vs List vs Array this was one of the first things I came across in a SO post.
 
@@ -115,6 +116,8 @@ Key findings:
 - IEnumerable types have a method to get the next item in the collection. It doesn't need the whole collection to be in memory and doesn't know how many items are in it, foreach just keeps getting the next item until it runs out.
 - List implements IEnumerable, but represents the entire collection in memory.
 - LINQ expressions return an enumeration, and by default the expression executes when you iterate through it using a foreach, but you can force it to iterate sooner using `.ToList()` or `.ToArray()`.
+
+## Useful links
 
 Other useful links on the topic:
 - [Multiple enumeration](http://twistedoakstudios.com/blog/Post7694_achieving-exponential-slowdown-by-enumerating-twice).
