@@ -11,7 +11,7 @@ When you might use an IEnumerable:
 When you might use a List or Array:
 - You need the results right away and are possibly mutating the structure you are querying later on.
 
-### C# IEnumerables vs Lists and Arrays
+### C# IEnumerables vs Lists and Arrays.
 #### How do they work and when do I choose one over the other.
 
 My name is Ben Muller and I am an aspiring software engineer. I work at MYOB in Sydney, Australia and I have been in the [Future Makers Academy](https://www.myob.com/au/careers/graduate-program) (“FMA”) for just over two months. As part of the FMA protégés have the incredible opportunity to present their code at milestones referred to as quorum reviews (“QR”). At the QR a protégé presents a coding challenge and walks through their solution, business logic, design choices and overall understanding of C# and the language design principles associated with it. The QR is done in front of six senior developers, a principal developer ( lead developer ) and the FMA coordinator.
