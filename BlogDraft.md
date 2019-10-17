@@ -3,7 +3,7 @@
 **TL;DR**
 It depends! As is often the case with programming. 
 
-IEnumerables delay execution of the query until the code is looped over or a value type is extracted. Basically IEnumerables have a method to get the next item in the collection, so they look at items "one at a time", they don't need the whole collection to be in memory and don't know how many items are in it, foreach just keeps getting the next item until it runs out. 
+IEnumerables delay execution of the query until the code is looped over or a value type is extracted. Basically IEnumerables have a method to get the next item in the collection, so they look at items "one at a time", they don't need the whole collection to be in memory and don't know how many items are in it, foreach just keeps getting the next item until it runs out. IEnumerables also help ensure immutability, as you are always querying the source there are no unintended side effects.
 
 Lists and Arrays create objects in memory and allow  access to a whole lot of methods associated with those types ([Lists](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.8#methods) | [Arrays](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=netframework-4.8#methods)). Lists and Arrays know how many items are in the collection and how have more acknowledgment of their whole structure.
 
